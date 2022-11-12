@@ -4,6 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".TelaProfile">
+
+    <View
+    android:id="@+id/containerUser"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/container_user"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="@id/containerUser"
+        app:layout_constraintEnd_toEndOf="@id/containerUser"
+        app:layout_constraintTop_toTopOf="@id/containerUser"
+        app:layout_constraintBottom_toBottomOf="@id/containerUser"/>
+    
+    <ImageView
+        android:id="@+id/containerUserIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exemplo"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toEndOf="@id/containerUserIcon"/>
+
+    <ImageView
+        android:id="@+id/containerUserCash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_wallet"
+        app:layout_constraintTop_toBottomOf="@id/containerUserIcon"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_User_Balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 2.500"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text_Username"
+        app:layout_constraintStart_toEndOf="@id/containerUserCash"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/button"
+        android:text="Sair"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/text_User_Balance"
+        app:layout_constraintStart_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
