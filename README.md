@@ -1,3 +1,3 @@
 # ProjetoDM
 
-### Project to work with SQLite into Android Studio Application.
+### Project to work with Firebase into Android Studio Application.
